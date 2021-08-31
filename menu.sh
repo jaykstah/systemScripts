@@ -23,7 +23,7 @@ echo "7) --- COMING SOON ---"
 echo "A) About this script"
 echo "Q) Quit"
 echo
-read -n -s -p "Selection:" mainMenu
+read -s -p "Selection:" mainMenu
 
 # Main menu for launching other scripts
 
