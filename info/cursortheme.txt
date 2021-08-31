@@ -1,0 +1,6 @@
+CHANGE CURSOR THEME GLOBALLY
+============================
+/usr/share/icons/default/index.theme
+~/.icons/default/index.theme
+~/.Xresources
+~/.config/gtk-3.0/settings.ini
