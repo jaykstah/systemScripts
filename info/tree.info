@@ -1,0 +1,20 @@
+./
+
+jaykstahMenu.sh
+|
+|---jacksinks.sh
+|
+|---virtualcam.sh 
+|
+|---performance.sh
+|
+|---updategrub.sh
+|
+|---cursorChange.sh
+|
+|---info
+|   |
+|   |---about.info
+|   |---tree.info
+|   |---themeName.info
+    
