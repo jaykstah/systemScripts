@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SETTING VARIABLES
-themeName=./info/themeName.info
+themeName=./temp/themeName.info
 rootChanger=./replacerTestRoot.sh
 session=`loginctl session-status | head -n 1 | awk '{print $1}'`
 
