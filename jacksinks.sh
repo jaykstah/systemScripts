@@ -13,4 +13,4 @@ pactl load-module module-jack-source client_name=soundboard-source connect=no
 echo
 echo "Successfully launched 4 JACK sinks / sources"
 echo
-"exit 0"
+exit 0

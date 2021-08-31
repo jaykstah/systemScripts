@@ -10,4 +10,4 @@ echo performance > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo "Success!"
 echo
-"exit 0"
+"$menuReturn"
