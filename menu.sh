@@ -38,7 +38,7 @@ case $mainMenu in
         ./tabletfix.sh
         ;;
     "4") 
-        ./performance.sh
+        sudo ./performance.sh
         ;;
     "5") 
         ./updategrub.sh
