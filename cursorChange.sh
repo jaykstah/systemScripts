@@ -1,9 +1,5 @@
 #!/bin/bash
-
-# SETTING VARIABLES
-themeName=./temp/themeName.info
-rootChanger=./replacerTestRoot.sh
-session=`loginctl session-status | head -n 1 | awk '{print $1}'`
+source=./info/functions
 
 echo Enter cursor theme name:
 read THEME
@@ -32,7 +28,7 @@ echo
 echo
 echo "Choose Option:"
 echo "1) Continue to root & display manager theme change"
-echo "2) Exit"
+echo "2) Exit to menu"
 read -n1 -s -p "Selection:" menu
 
 case $menu in
@@ -51,11 +47,9 @@ case $menu in
         read -n1 -s
         sudo sed -i "/CursorTheme/s/=.*/=$THEME/" /etc/sddm.conf.d/sddm.conf
         ;;
-    "2") 
-        exit 0 
-        ;;
-    *) 
-        exit 0 
+    "2") exit 0 ;;
+    *)
+        exit 0
         ;;
 esac
 
@@ -89,10 +83,4 @@ case $menu2 in
     "2") exit 0 ;;
     *) exit 0 ;;
 esac
-
-# EXIT FROM HERE 
-#read -n1 -s -p exit
-#case $exit in
-#    *) exit 0 ;;
-#esac
 

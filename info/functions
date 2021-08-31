@@ -1,4 +1,34 @@
 #!/bin/bash
 
-# Main script locations
+### MAIN SCRIPT LOCATIONS
+
+## Menu/interface related scripts & assets
+# Main menu
+menu="./menu.sh"
+# Return to menu prompt after using a script
+menuReturn="./menuReturn.sh"
+menuReturnSub="./menuReturn.sh"
+about="./info/about.info"
+
+## Automation scripts / tools / apps
+# CPU > Performance mode
 performance="./performance.sh"
+# Start up PulseAudio <> JACK bridged sinks
+jackSinks="./jacksinks.sh"
+# Start up v4l2loopback device to use OBS as camera
+virtualCam="./virtualcam.sh"
+# Set resolution for drawing tablet
+tabletFix="./tabletfix.sh"
+# Update grub config after changes
+updateGrub="./updategrub.sh"
+# Change mouse cursor theme globally
+cursorChange="./cursorChange.sh"
+
+### MISC. VARIABLE LOCATIONS
+
+## cursorChange variables
+
+# Print theme name temp for cursorChange
+themeName=./temp/themeName.info
+# Get session of current user to log out for cursorChange
+session=`loginctl session-status | head -n 1 | awk '{print $1}'`

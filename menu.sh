@@ -1,4 +1,5 @@
 #!/bin/bash
+source ./info/functions
 
 main() {
 
@@ -29,22 +30,22 @@ read -p "Selection:" mainMenu
 
 case $mainMenu in
     "1") 
-        ./jacksinks.sh
+        "$jackSinks"
         ;;
     "2")
-        ./virtualcam.sh
+        "$virtualCam"
         ;;
     "3") 
-        ./tabletfix.sh
+        "$tabletFix"
         ;;
     "4") 
-        sudo ./performance.sh
+        sudo "$performance"
         ;;
     "5") 
-        ./updategrub.sh
+        "$updateGrub"
         ;;
     "6") 
-        ./cursorChange.sh
+        "$cursorChange"
         ;;
     "Q"|"q") 
         clear
@@ -56,7 +57,7 @@ case $mainMenu in
     "A"|"a")
         clear
         echo
-        cat ./info/about.info
+        cat "$about"
         echo
         echo Press any key to return to menu...
         echo
