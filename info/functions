@@ -4,27 +4,27 @@
 
 ## Menu/interface related scripts & assets
 # Main menu
-menu="./menu.sh"
+menu="scripts/menu.sh"
 # Return to menu prompt after using a script
-menuReturn="./menuReturn.sh"
-menuReturnSub="./menuReturn.sh"
-about="./info/about.info"
+menuReturn="scripts/menuReturn.sh"
+menuReturnSub="scripts/menuReturn.sh"
+about="info/about.info"
 
 ## Automation scripts / tools / apps
 # CPU > Performance mode
-performance="./performance.sh"
+performance="scripts/performance.sh"
 # Start up PulseAudio <> JACK bridged sinks
-jackSinks="./jacksinks.sh"
+jackSinks="scripts/jacksinks.sh"
 # Start up v4l2loopback device to use OBS as camera
-virtualCam="./virtualcam.sh"
+virtualCam="scripts/virtualcam.sh"
 # Set resolution for drawing tablet
-tabletFix="./tabletfix.sh"
+tabletFix="scripts/tabletfix.sh"
 # Update grub config after changes
-updateGrub="./updategrub.sh"
+updateGrub="scripts/updategrub.sh"
 # Change mouse cursor theme globally
-cursorChange="./cursorChange.sh"
+cursorChange="scripts/cursorChange.sh"
 # Remove orphaned packages via pacman
-orphanRemoval="./orphanRemoval.sh"
+orphanRemoval="scripts/orphanRemoval.sh"
 
 ### MISC. VARIABLE LOCATIONS
 
