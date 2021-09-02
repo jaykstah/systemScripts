@@ -10,4 +10,4 @@ xinput map-to-output 22 HDMI-0
 xinput disable 21
 echo Success!
 echo
-exit 0
+return

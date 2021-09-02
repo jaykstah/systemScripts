@@ -1,0 +1,25 @@
+============================
+CHANGE CURSOR THEME GLOBALLY
+============================
+These are good locations to change the cursor theme from,
+in order for it to match across apps.
+
+/usr/share/icons/default/index.theme
+~/.icons/default/index.theme
+~/.Xresources
+~/.config/gtk-3.0/settings.ini
+
+===========================
+CHANGE FONT GLOBALLY
+===========================
+These are good locations to specify system font.
+This is implying a setup using i3wm & polybar
+for window management. 
+
+~/.config/gtk-3.0/settings.ini
+~/.config/polybar/config
+~/.config/i3/config
+~/.config/alacritty/config.yml
+~/.gtkrc-2.0
+
+Use qt5ct for qt5 theming!

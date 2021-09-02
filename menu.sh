@@ -20,7 +20,7 @@ echo "3) Tabletfix ( Set resolution of drawing tablet )"
 echo "4) Performance ( Set all CPU cores/threads to high performance mode)"
 echo "5) Update GRUB Config"
 echo "6) Change mouse cursor theme globally"
-echo "7) --- COMING SOON ---"
+echo "7) Remove orphaned packages"
 echo "A) About this script"
 echo "Q) Quit"
 echo
@@ -30,22 +30,31 @@ read -p "Selection:" mainMenu
 
 case $mainMenu in
     "1") 
-        "$jackSinks"
+        source "$jackSinks"
+        main
         ;;
     "2")
-        "$virtualCam"
+        source "$virtualCam"
+        main
         ;;
     "3") 
         "$tabletFix"
+        main
         ;;
     "4") 
-        sudo "$performance"
+        source "$performance"
+        main
         ;;
     "5") 
-        "$updateGrub"
+        source "$updateGrub"
+        main
         ;;
     "6") 
-        "$cursorChange"
+        source "$cursorChange"
+        main
+        ;;
+    "7")
+        source "$orphanRemoval"
         ;;
     "Q"|"q") 
         clear

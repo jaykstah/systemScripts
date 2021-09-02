@@ -23,6 +23,8 @@ tabletFix="./tabletfix.sh"
 updateGrub="./updategrub.sh"
 # Change mouse cursor theme globally
 cursorChange="./cursorChange.sh"
+# Remove orphaned packages via pacman
+orphanRemoval="./orphanRemoval.sh"
 
 ### MISC. VARIABLE LOCATIONS
 

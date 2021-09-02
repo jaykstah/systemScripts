@@ -10,4 +10,6 @@ sudo modprobe v4l2loopback devices=1 video_nr=10 card_label="OBS Cam" exclusive_
 echo
 echo "Success!"
 echo
-exit 0
+echo "Press [ENTER] to return to menu!"
+read -n1
+return

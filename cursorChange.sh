@@ -31,36 +31,34 @@ echo "1) Continue to root & display manager theme change"
 echo "2) Exit to menu"
 read -n1 -s -p "Selection:" menu
 
-case $menu in
+case $menu in 
     "1") 
         # Replace theme for root user
-        clear
         echo "Replacing theme for root user! (Requires sudo permission) PRESS CTRL+C TO CANCEL"
         echo "PRESS [ENTER] TO CONTINUE"
         read -n1 -s
         sudo sed -i "/Inherits/s/=.*/=$THEME/" /usr/share/icons/default/index.theme
 
         # Replace theme for display manager
-        clear
         echo "Replacing theme for SDDM! (Requires sudo permission) PRESS CTRL+C TO CANCEL"
         echo "PRESS [ENTER] TO CONTINUE"
         read -n1 -s
         sudo sed -i "/CursorTheme/s/=.*/=$THEME/" /etc/sddm.conf.d/sddm.conf
+        
+        clear 
+        echo
+        echo
+        echo "Changes committed for cursor theme"
+        echo "Config files changed:"
+        echo "/usr/share/icons/default/index.theme"
+        echo "/etc/sddm.conf.d/sddm.conf"
+        echo 
         ;;
-    "2") exit 0 ;;
-    *)
-        exit 0
-        ;;
+    *) return ;;
 esac
 
-clear 
 echo
 echo
-echo "Changes committed for cursor theme"
-echo "Config files changed:"
-echo "/usr/share/icons/default/index.theme"
-echo "/etc/sddm.conf.d/sddm.conf"
-echo 
 echo "Choose Option:"
 echo "1) Log out and back in to see changes (May require password)"
 echo "2) Exit"
@@ -80,7 +78,7 @@ case $menu2 in
         esac
         exit 0
         ;;
-    "2") exit 0 ;;
-    *) exit 0 ;;
+    *) return ;;
 esac
 
+return

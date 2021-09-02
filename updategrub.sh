@@ -10,4 +10,4 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo
 echo Success!
 echo
-exit 0
+return
