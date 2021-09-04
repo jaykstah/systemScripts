@@ -54,7 +54,10 @@ case $menu in
         echo "/etc/sddm.conf.d/sddm.conf"
         echo 
         ;;
-    *) return ;;
+    *)
+        rm "$themeName"
+        return
+        ;;
 esac
 
 echo
@@ -78,7 +81,10 @@ case $menu2 in
         esac
         exit 0
         ;;
-    *) return ;;
+    *)
+        rm "$themeName"
+        return
+        ;;
 esac
 
 return
