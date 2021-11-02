@@ -15,6 +15,8 @@ about="info/about.info"
 performance="scripts/performance.sh"
 # Start up PulseAudio <> JACK bridged sinks
 jackSinks="scripts/jacksinks.sh"
+# Pulse sinks
+pulseSinks="scripts/pulseSinks.sh"
 # Start up v4l2loopback device to use OBS as camera
 virtualCam="scripts/virtualcam.sh"
 # Set resolution for drawing tablet
