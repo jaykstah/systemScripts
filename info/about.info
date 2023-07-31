@@ -2,39 +2,26 @@
 ABOUT
 --------------------
 Author: Jaykstah
-Version: 1.0 "Toolbox"
 
-    This script is a personal utility written by Jaykstah to automate certain common tasks used with the main workstation setup.
-    This utility is mainly used as a hub to execute other, independent scripts with their own functions.
-    These functions range from audio system configuration, hardware profiles, peripheral configuration, themeing, and more.
-    
-    Some scripts to require sudo permissions. These are texted explicitly on Jaykstah's system and may cause damage if used on a foreign system.
-    If you wish to use this utility, or modify it for use, on your own system, I recommend reading through each script that you may used
-    in order to modify it for correct compatibility with your system.
-    Also, it may be wise to remove menu entries for scripts you will not make use of, to avoid errant keypresses.
-    
-    I have made an effort to put ample warning and pauses for user input whenever a script may require sudo permission.
-    Keep in mind most of these scripts are used on a daily basis, so not a lot of precaution has been taken as they are 
-    tried and true on my system.
-    
-    Also, these scripts are structured from the perspective of an Arch Linux install, and may misbehave on other distros.
-    Pay attention to how commands are being used and modify them if there is a better method to call the same functions 
-    for your particular distro.
-    
-    Jaykstah is not responsible for any damage done to your Linux installation due to flippant use of this utility.
-    Again, it is configured specifically for one workstation setup.
-    
-    Current configuration is expecting a 4 core/4 thread Intel processor (namely i5 6600k) which is non hyperthreaded
-    as well as an Nvidia 10 series GPU (namely a GTX 1070) using the latest proprietary drivers.
-    
-    Some calls will also assume that certain libraries are installed, which may not be by default on your distro.
-    These scripts are not designed explicitly to point out missing, required software, so if a command fails you
-    may need to investigate and install the missing software packages and kernel modules needed.
-    
-    Some scripts also assume naming conventions based on Jaykstah's workstation. Configuration involving peripherals
-    may not be configured in a "smart" way and refer to ID's expected by xinput on Jaykstah's system.
-    There is work being done to improve the scripts and add the ability for them to locate devices by name,
-    but they are largely still reliant on an expected configuration of hardware and xinput naming schemes.
-    
-    These scripts are using commands which assume the workstation is using the systemd init system, the X display server,
-    and will be interpreted through a bash shell.
+    These scripts are a collection of tools I've written for my own workflow and system configuration.
+    The menu.sh script is a hub to access all of the functions.
+    This script will not pull dependencies for these functions but I'll make an effort to describe what uncommon packages are needed, if any, next to each menu entry.
+
+    I've written these scripts for my personal Arch system so some tools will rely on pacman or other Arch-isms. Currently most tools rely on a somewhat hardcoded layout that is specific to my system, so not all tools will work for others and may break your configs!
+    I'm planning to overhaul some of these scripts to make them a bit smarter and more adaptable to different environments.
+
+    I'm by no means a shell scripting expert, so suggestions are appreciated if you can see easy ways to improve how they work without adding unnecessary features.
+
+    Overall these scripts can be described as utilities for system maintenence & customization to compliment my Arch + sway setup and make things easier to manage.
+
+    Below I'll catalogue my system to show what I'm using. Some scripts are reliant on this setup and will not work properly if alternatives are used.
+
+Init: systemd *1
+Package manager: pacman
+Window Manager: sway
+Audio backend: PipeWire *2
+Shell: bash *3
+
+*1: Some scripts rely on systemd related commands to get info about the user's session or to prompt a logout
+*2: I am currently using PipeWire but some scripts still use PulseAudio commands and may work fine under PulseAudio
+*3: All scripts have a shebang to be interpreted by bash. As long as bash is installed they should work regardless of the interactive shell you use.

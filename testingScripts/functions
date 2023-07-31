@@ -1,0 +1,4 @@
+#!/bin/bash
+one="First line"
+two="Second line"
+three="Third line"

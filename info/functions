@@ -2,37 +2,56 @@
 
 ### MAIN SCRIPT LOCATIONS
 
+# ------------------------------------------
 ## Menu/interface related scripts & assets
+
 # Main menu
 menu="scripts/menu.sh"
 # Return to menu prompt after using a script
 menuReturn="scripts/menuReturn.sh"
 menuReturnSub="scripts/menuReturn.sh"
 about="info/about.info"
+# ------------------------------------------
 
+
+# ------------------------------------------
 ## Automation scripts / tools / apps
+
 # CPU > Performance mode
 performance="scripts/performance.sh"
-# Start up PulseAudio <> JACK bridged sinks
+
+# Start up PulseAudio <> JACK bridged sinks (!!! May only be functional on proper JACK/Pulse bridged setup)
 jackSinks="scripts/jacksinks.sh"
-# Pulse sinks
+
+# Start up virtual audio devices (!!! Usable with PipeWire via the `pipewire-pulse` package)
 pulseSinks="scripts/pulseSinks.sh"
-# Start up v4l2loopback device to use OBS as camera
+
+# Start up v4l2loopback device to use OBS as camera (!!! Deprecated - OBS has virtual camera built in)
 virtualCam="scripts/virtualcam.sh"
-# Set resolution for drawing tablet
+
+# Set resolution for drawing tablet (!!! Intended for X11 via xrandr/xinput commands, may not work under Wayland)
 tabletFix="scripts/tabletfix.sh"
+
 # Update grub config after changes
 updateGrub="scripts/updategrub.sh"
+
 # Change mouse cursor theme globally
 cursorChange="scripts/cursorChange.sh"
+
 # Remove orphaned packages via pacman
 orphanRemoval="scripts/orphanRemoval.sh"
 
-### MISC. VARIABLE LOCATIONS
+# Audio startup
+audioStartup="scripts/audioSink-startup.sh"
+# ------------------------------------------
 
-## cursorChange variables
+
+# ------------------------------------------
+### MISC. VARIABLE LOCATIONS
 
 # Print theme name temp for cursorChange
 themeName=./temp/themeName.info
+
 # Get session of current user to log out for cursorChange
 session=`loginctl session-status | head -n 1 | awk '{print $1}'`
+# ------------------------------------------

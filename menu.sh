@@ -1,8 +1,8 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 source ./info/functions
 
 main() {
-
 clear
 echo
 echo
@@ -14,13 +14,13 @@ echo "____________________________________________"
 echo
 echo "press ctl-c to exit at any time"
 echo
-echo "1) JACK Sinks ( PulseAudio <---> JACK )"
+echo "1) Pulse Sinks ( Virtual outputs/inputs to separate audio streams )"
 echo "2) VirtualCam ( Use OBS as a camera via v4l2loopback )"
-echo "3) Tabletfix ( Set resolution of drawing tablet )"
+echo "3) Tabletfix ( Set resolution of drawing tablet [X11 Only])"
 echo "4) Performance ( Set all CPU cores/threads to high performance mode)"
 echo "5) Update GRUB Config"
 echo "6) Change mouse cursor theme globally"
-echo "7) Remove orphaned packages"
+echo "7) Remove orphaned packages ( via pacman )"
 echo "A) About this script"
 echo "Q) Quit"
 echo
@@ -30,7 +30,7 @@ read -p "Selection:" mainMenu
 
 case $mainMenu in
     "1") 
-        source "$jackSinks"
+        source "$audioStartup"
         main
         ;;
     "2")

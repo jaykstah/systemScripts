@@ -15,6 +15,9 @@ sed -i "/Inherits/s/=.*/=$THEME/" ~/.icons/default/index.theme
 # Replace theme in ~/.config/gtk-3.0/settings.ini
 sed -i "/gtk-cursor-theme-name/s/=.*/=$THEME/" ~/.config/gtk-3.0/settings.ini
 
+# gsettings command
+# exec gsettings set org.gnome.desktop.interface cursor-theme $THEME
+
 # Confirm changes and exit
 clear
 echo
